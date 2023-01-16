@@ -10,7 +10,6 @@ class PageController extends Controller
     public function index()
     {
         $movies = Movie::all();
-        dump($movies);
-        return view('guest.homepage');
+        return view('guest.homepage', compact('movies'));
     }
 }
